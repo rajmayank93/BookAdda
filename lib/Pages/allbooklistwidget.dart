@@ -51,7 +51,7 @@ class _BookListWidgetState extends State<BookListWidget> {
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext ctx, index) {
                 return Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
                       // ignore: prefer_const_literals_to_create_immutables
@@ -136,9 +136,9 @@ class _BookListWidgetState extends State<BookListWidget> {
                               // ignore: sort_child_properties_last
                               child: const Text("Read Now"),
                               style: TextButton.styleFrom(
-                                  foregroundColor: Color(0xffEBC7E6),
+                                  foregroundColor: const Color(0xffEBC7E6),
                                   elevation: 2,
-                                  backgroundColor: Color(0xff645CBB)),
+                                  backgroundColor: const Color(0xff645CBB)),
                             ),
                           ),
                         )

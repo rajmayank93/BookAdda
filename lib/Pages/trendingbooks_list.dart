@@ -45,6 +45,7 @@ class _CardViewState extends State<CardView> {
     return FutureBuilder(
       future: getRequest(),
       builder: (BuildContext ctx, AsyncSnapshot snapshot) {
+        // print(snapshot.data);
         if (snapshot.data == null) {
           return Container(
             child: const Center(
@@ -55,7 +56,6 @@ class _CardViewState extends State<CardView> {
           return Column(
             children: [
               // USING 3-LISTVIEW IN HORIZONTAL
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -143,9 +143,6 @@ class _CardViewState extends State<CardView> {
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
-                        // SizedBox(
-                        //   height: 1.h,
-                        // ),
                         Text(
                           // ignore: prefer_interpolation_to_compose_strings
                           "Rs." + (100 + random.nextInt(500)).toString(),
@@ -235,9 +232,6 @@ class _CardViewState extends State<CardView> {
                             ), //CircleAvatar
                           ),
                         ),
-                        // SizedBox(
-                        //   height: 1.h,
-                        // ),
                         Text(
                           snapshot.data[index + 6]["volumeInfo"]["title"]
                                       .length >
@@ -246,8 +240,6 @@ class _CardViewState extends State<CardView> {
                                       .substring(0, 15) +
                                   '...'
                               : snapshot.data[index + 6]["volumeInfo"]["title"],
-                          // snapshot.data[index].title,
-
                           style: TextStyle(
                             fontSize: 15.sp,
                             fontWeight: FontWeight.bold,
@@ -255,9 +247,6 @@ class _CardViewState extends State<CardView> {
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
-                        // SizedBox(
-                        //   height: 1.h,
-                        // ),
                         Text(
                           // ignore: prefer_interpolation_to_compose_strings
                           "Rs." + (100 + random.nextInt(500)).toString(),
